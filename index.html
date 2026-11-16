@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sanjana G — Web Developer &amp; Data Analyst</title>
+    <meta
+      name="description"
+      content="Portfolio of Sanjana G, final-year B.Sc. (Mathematics, Statistics &amp; Computer Science) student in Hyderabad building fast web apps, browser games, and data analysis tools."
+    />
+    <link rel="canonical" href="https://sanshikhakova.github.io/" />
+    <meta name="theme-color" content="#faf6ef" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#12141c" media="(prefers-color-scheme: dark)" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sanjana G — Web Developer &amp; Data Analyst" />
+    <meta
+      property="og:description"
+      content="Final-year B.Sc. (Mathematics, Statistics &amp; Computer Science) student in Hyderabad turning numbers and code into usable web apps and clear analyses."
+    />
+    <meta property="og:url" content="https://sanshikhakova.github.io/" />
+    <meta property="og:image" content="https://sanshikhakova.github.io/assets/img/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sanjana G — Web Developer &amp; Data Analyst" />
+    <meta
+      name="twitter:description"
+      content="Final-year B.Sc. (Mathematics, Statistics &amp; Computer Science) student in Hyderabad building web apps, browser games, and Python data tools."
+    />
+    <meta name="twitter:image" content="https://sanshikhakova.github.io/assets/img/og-image.png" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <!-- Fonts: Fraunces, Inter, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Critical theme bootstrap to prevent flash of wrong theme -->
+    <script>
+      (function () {
+        const saved = localStorage.getItem('sg-theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = saved === 'dark' || saved === 'light' ? saved : prefersDark ? 'dark' : 'light';
+        document.documentElement.dataset.theme = theme;
+        document.documentElement.classList.add('js');
+      })();
+    </script>
+
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Sanjana G",
+        "url": "https://sanshikhakova.github.io/",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "addressCountry": "IN"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "St. Ann's College for Women, Mehdipatnam, Hyderabad"
+        },
+        "knowsAbout": [
+          "Web Development",
+          "Data Analysis",
+          "Python",
+          "JavaScript",
+          "HTML",
+          "CSS",
+          "Mathematics",
+          "Statistics",
+          "Linear Algebra",
+          "Data Structures"
+        ],
+        "sameAs": [
+          "https://github.com/sanshikhakova",
+          "https://www.linkedin.com/in/sanjana-g-bb2b3044b/"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+    <header class="site-header" id="top">
+      <div class="container site-header__inner">
+        <a class="brand" href="#top" aria-label="Sanjana G — Home">
+          <span class="brand__mark" aria-hidden="true">SG</span>
+          <span class="brand__name">Sanjana G</span>
+        </a>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="#about">About</a></li>
+            <li><a class="site-nav__link" href="#projects">Projects</a></li>
+            <li><a class="site-nav__link" href="#skills">Skills</a></li>
+            <li><a class="site-nav__link" href="#experience">Experience</a></li>
+            <li><a class="site-nav__link" href="#beyond">Beyond</a></li>
+            <li><a class="site-nav__link" href="#contact">Contact</a></li>
+          </ul>
+          <div class="site-nav__actions">
+            <button
+              class="icon-btn"
+              id="theme-toggle"
+              type="button"
+              aria-label="Switch to dark theme"
+              aria-pressed="false"
+            >
+              <svg class="icon-btn__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+              </svg>
+              <svg class="icon-btn__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            </button>
+            <a class="btn btn--small btn--outline" href="assets/Sanjana_G_CV.pdf" download>
+              Download CV
+            </a>
+          </div>
+        </nav>
+
+        <div class="site-header__mobile-controls">
+          <button
+            class="icon-btn"
+            id="theme-toggle-mobile"
+            type="button"
+            aria-label="Switch to dark theme"
+            aria-pressed="false"
+          >
+            <svg class="icon-btn__sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+            <svg class="icon-btn__moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+          <button
+            class="icon-btn menu-toggle"
+            id="menu-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-drawer"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="mobile-drawer" id="mobile-drawer" hidden>
+        <div class="container mobile-drawer__inner">
+          <ul class="mobile-drawer__list">
+            <li><a class="mobile-drawer__link" href="#about">01 / About</a></li>
+            <li><a class="mobile-drawer__link" href="#projects">02 / Projects</a></li>
+            <li><a class="mobile-drawer__link" href="#skills">03 / Skills</a></li>
+            <li><a class="mobile-drawer__link" href="#experience">04 / Experience</a></li>
+            <li><a class="mobile-drawer__link" href="#beyond">05 / Beyond</a></li>
+            <li><a class="mobile-drawer__link" href="#contact">06 / Contact</a></li>
+          </ul>
+          <a class="btn btn--primary mobile-drawer__cta" href="assets/Sanjana_G_CV.pdf" download>
+            Download CV
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <div class="status-pill" data-reveal>
+              <span class="status-pill__dot" aria-hidden="true"></span>
+              <span>Open to entry-level roles</span>
+            </div>
+
+            <h1 class="hero__title" id="hero-heading">
+              <span class="word-reveal"><span>Turning</span></span>
+              <span class="word-reveal"><span>numbers</span></span>
+              <span class="word-reveal"><span>into</span></span>
+              <span class="word-reveal"><span class="squiggle-word">interfaces<svg class="squiggle" viewBox="0 0 180 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 Q 24 2, 46 9 T 90 9 T 134 9 T 178 9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span></span>
+              <span class="word-reveal"><span>people</span></span>
+              <span class="word-reveal"><span>can</span></span>
+              <span class="word-reveal"><span>click.</span></span>
+            </h1>
+
+            <p class="hero__subhead" data-reveal>
+              I am Sanjana G, a final-year B.Sc. (Mathematics, Statistics &amp; Computer Science) student in Hyderabad. I build fast, accessible web applications, browser games, and Python data tools.
+            </p>
+
+            <div class="hero__actions" data-reveal>
+              <a class="btn btn--primary" href="#projects">View projects</a>
+              <a class="btn btn--outline" href="assets/Sanjana_G_CV.pdf" download>Download CV</a>
+            </div>
+          </div>
+
+          <figure class="hero__stage" data-reveal>
+            <div class="canvas-frame">
+              <canvas id="hero-canvas" width="520" height="440" aria-hidden="true"></canvas>
+            </div>
+            <figcaption class="canvas-caption" id="hero-equation" aria-live="off">
+              x = sin(3.00t + 0.42), y = sin(2.00t)
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- 01 / ABOUT -->
+      <section class="section" id="about" aria-labelledby="about-heading">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="section__eyebrow">01 / About</p>
+            <h2 class="section__title" id="about-heading">
+              A mathematician’s habits applied to <span class="squiggle-word">software<svg class="squiggle" viewBox="0 0 160 14" preserveAspectRatio="none" aria-hidden="true"><path d="M2 9 Q 22 2, 42 9 T 82 9 T 122 9 T 158 9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg></span> &amp; data.
+            </h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-grid__bio" data-reveal>
+              <p>
+                I study Mathematics, Statistics, and Computer Science at St. Ann’s College for Women in Mehdipatnam, Hyderabad, graduating in May 2027 (expected CGPA: 8.0). Studying probability, linear algebra, and data structures side by side trained me to trace edge cases early, isolate bugs systematically, and explain technical decisions without jargon.
+              </p>
+              <p>
+                On the web, I enjoy building zero-dependency interfaces where geometry, state, and interaction feel crisp—from visual expense trackers to keyboard-driven maths games. I am seeking an entry-level software engineering, web development, or data analysis role on a collaborative, fast-paced team.
+              </p>
+
+              <dl class="facts-list">
+                <div class="facts-list__item">
+                  <dt>Location</dt>
+                  <dd>Hyderabad, Telangana, India</dd>
+                </div>
+                <div class="facts-list__item">
+                  <dt>Studying</dt>
+                  <dd>B.Sc. (Mathematics, Statistics &amp; Computer Science), expected May 2027 · CGPA: 8.0 (expected)</dd>
+                </div>
+                <div class="facts-list__item">
+                  <dt>Languages</dt>
+                  <dd>English, Hindi, Telugu, Tamil</dd>
+                </div>
+                <div class="facts-list__item">
+                  <dt>Currently learning</dt>
+                  <dd>AI automation workflows, statistical data analytics &amp; interactive browser graphics</dd>
+                </div>
+              </dl>
+            </div>
+
+            <aside class="about-grid__portrait" data-reveal>
+              <!--
+                EDIT: To swap in your portrait photo, add your image to assets/img/portrait.jpg,
+                remove the inline SVG monogram below, and uncomment this <img> tag:
+                <img
+                  class="portrait-card__photo"
+                  src="assets/img/portrait.jpg"
+                  alt="Portrait of Sanjana G"
+                  width="360"
+                  height="420"
+                  loading="lazy"
+                />
+              -->
+              <div class="portrait-card">
+                <svg
+                  class="portrait-card__svg"
+                  viewBox="0 0 320 360"
+                  role="img"
+                  aria-label="Geometric monogram emblem for Sanjana G"
+                >
+                  <defs>
+                    <pattern id="atelier-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+                      <path d="M 24 0 L 0 0 0 24" fill="none" stroke="currentColor" stroke-opacity="0.12" stroke-width="1" />
+                    </pattern>
+                  </defs>
+                  <rect width="320" height="360" fill="url(#atelier-grid)" />
+                  <circle cx="160" cy="172" r="108" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="6 6" />
+                  <circle cx="160" cy="172" r="84" fill="var(--bg-elevated)" stroke="currentColor" stroke-opacity="0.22" stroke-width="1.5" />
+                  <path d="M56 266 C 110 226, 210 226, 264 266" fill="none" stroke="var(--sage)" stroke-width="2" />
+                  <circle cx="242" cy="96" r="10" fill="var(--saffron)" />
+                  <text
+                    x="160"
+                    y="188"
+                    text-anchor="middle"
+                    font-family="Fraunces, Georgia, serif"
+                    font-size="56"
+                    font-weight="700"
+                    fill="currentColor"
+                  >
+                    SG
+                  </text>
+                  <text
+                    x="160"
+                    y="318"
+                    text-anchor="middle"
+                    font-family="JetBrains Mono, monospace"
+                    font-size="11"
+                    letter-spacing="1.5"
+                    fill="currentColor"
+                    opacity="0.7"
+                  >
+                    HYDERABAD · B.SC. MSCS ’27
+                  </text>
+                </svg>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 / PROJECTS -->
+      <section class="section" id="projects" aria-labelledby="projects-heading">
+        <div class="container">
+          <div class="section__head section__head--row" data-reveal>
+            <div>
+              <p class="section__eyebrow">02 / Projects</p>
+              <h2 class="section__title" id="projects-heading">Selected work</h2>
+            </div>
+
+            <div class="filter-bar" role="toolbar" aria-label="Filter projects by category">
+              <button class="chip chip--filter is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+              <button class="chip chip--filter" type="button" data-filter="web" aria-pressed="false">Web</button>
+              <button class="chip chip--filter" type="button" data-filter="data" aria-pressed="false">Data</button>
+              <button class="chip chip--filter" type="button" data-filter="games" aria-pressed="false">Games</button>
+            </div>
+          </div>
+
+          <p class="filter-status" id="filter-status" aria-live="polite">Showing all 3 projects</p>
+
+          <div class="projects-grid" id="projects-grid">
+            <!-- Project 1: Math Dash -->
+            <article class="project-card spotlight-card" data-tags="web games" data-project="math-dash" data-reveal>
+              <div class="project-card__media">
+                <svg class="project-thumb" viewBox="0 0 400 220" role="img" aria-label="Math Dash visual motif with mathematical operators and symbols">
+                  <rect width="400" height="220" fill="var(--surface)" />
+                  <circle cx="84" cy="64" r="38" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-dasharray="4 4" />
+                  <polygon points="318,42 356,106 280,106" fill="none" stroke="var(--saffron)" stroke-width="2" />
+                  <path d="M48 174 Q 140 120, 220 168 T 364 148" fill="none" stroke="var(--sage)" stroke-width="2" />
+                  <g font-family="Fraunces, Georgia, serif" font-weight="700" fill="currentColor">
+                    <text x="72" y="74" font-size="28">∑</text>
+                    <text x="176" y="96" font-size="34" fill="var(--accent)">π</text>
+                    <text x="242" y="156" font-size="26">√x</text>
+                    <text x="118" y="154" font-size="24" opacity="0.75">P(A|B)</text>
+                    <text x="306" y="96" font-size="22">mod</text>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="project-card__body">
+                <div class="project-card__meta">
+                  <span class="badge">Web</span>
+                  <span class="badge">Games</span>
+                </div>
+                <h3 class="project-card__title">Math Dash</h3>
+                <p class="project-card__pitch">
+                  A modular speed mathematics and statistics browser quiz game with rule-based distractors, Sprint and Survival modes, and a response-time statistics panel.
+                </p>
+                <ul class="stack-list" aria-label="Technologies used">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript (ES6+ modules)</li>
+                  <li>Web Audio API</li>
+                  <li>Canvas 2D</li>
+                </ul>
+                <div class="project-card__links">
+                  <button class="btn btn--small btn--primary" type="button" data-open-dialog="dialog-math-dash">
+                    Case study
+                  </button>
+                  <a class="text-link" href="https://sanshikhakova.github.io/math-dash/" target="_blank" rel="noopener noreferrer">
+                    Live demo <span aria-hidden="true">↗</span>
+                  </a>
+                  <a class="text-link" href="https://github.com/sanshikhakova/math-dash" target="_blank" rel="noopener noreferrer">
+                    GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: Student Marks Analyzer -->
+            <article class="project-card spotlight-card" data-tags="data python" data-project="marks-analyzer" data-reveal>
+              <div class="project-card__media">
+                <svg class="project-thumb" viewBox="0 0 400 220" role="img" aria-label="Student Marks Analyzer visual motif showing a histogram and regression line">
+                  <rect width="400" height="220" fill="var(--surface)" />
+                  <line x1="56" y1="180" x2="352" y2="180" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5" />
+                  <line x1="56" y1="36" x2="56" y2="180" stroke="currentColor" stroke-opacity="0.3" stroke-width="1.5" />
+                  <rect x="78" y="132" width="32" height="48" rx="4" fill="var(--sage)" opacity="0.85" />
+                  <rect x="124" y="102" width="32" height="78" rx="4" fill="var(--sage)" opacity="0.85" />
+                  <rect x="170" y="74" width="32" height="106" rx="4" fill="var(--saffron)" opacity="0.9" />
+                  <rect x="216" y="62" width="32" height="118" rx="4" fill="var(--accent)" opacity="0.9" />
+                  <rect x="262" y="88" width="32" height="92" rx="4" fill="var(--sage)" opacity="0.85" />
+                  <rect x="308" y="118" width="32" height="62" rx="4" fill="var(--sage)" opacity="0.85" />
+                  <line x1="72" y1="156" x2="342" y2="54" stroke="var(--accent)" stroke-width="2.5" stroke-dasharray="6 4" />
+                  <circle cx="94" cy="144" r="4" fill="currentColor" />
+                  <circle cx="186" cy="98" r="4" fill="currentColor" />
+                  <circle cx="278" cy="76" r="4" fill="currentColor" />
+                  <text x="272" y="46" font-family="JetBrains Mono, monospace" font-size="12" fill="currentColor">R² · IQR · z</text>
+                </svg>
+              </div>
+
+              <div class="project-card__body">
+                <div class="project-card__meta">
+                  <span class="badge">Data</span>
+                  <span class="badge">Python</span>
+                  <span class="badge badge--muted">Synthetic dataset (n = 120)</span>
+                </div>
+                <h3 class="project-card__title">Student Marks Analyzer</h3>
+                <p class="project-card__pitch">
+                  A Python CLI tool that validates messy examination CSVs (synthetic dataset of 120 generated students), runs 12 univariate metrics and OLS regression, and outputs 9 diagnostic charts plus a multi-page PDF report.
+                </p>
+                <ul class="stack-list" aria-label="Technologies used">
+                  <li>Python</li>
+                  <li>pandas</li>
+                  <li>NumPy</li>
+                  <li>matplotlib</li>
+                  <li>pytest</li>
+                </ul>
+                <div class="project-card__links">
+                  <button class="btn btn--small btn--primary" type="button" data-open-dialog="dialog-marks-analyzer">
+                    Case study
+                  </button>
+                  <a class="text-link" href="https://github.com/sanshikhakova/student-marks-analyzer" target="_blank" rel="noopener noreferrer">
+                    GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: Expense Tracker & Visual Budget App -->
+            <article class="project-card spotlight-card" data-tags="web data" data-project="expense-tracker" data-reveal>
+              <div class="project-card__media">
+                <svg class="project-thumb" viewBox="0 0 400 220" role="img" aria-label="Expense Tracker visual motif showing a donut chart and category progress bars">
+                  <rect width="400" height="220" fill="var(--surface)" />
+                  <circle cx="122" cy="110" r="52" fill="none" stroke="var(--sage)" stroke-width="18" stroke-dasharray="130 327" />
+                  <circle cx="122" cy="110" r="52" fill="none" stroke="var(--saffron)" stroke-width="18" stroke-dasharray="95 327" stroke-dashoffset="-130" />
+                  <circle cx="122" cy="110" r="52" fill="none" stroke="var(--accent)" stroke-width="18" stroke-dasharray="102 327" stroke-dashoffset="-225" />
+                  <g transform="translate(208, 68)">
+                    <rect x="0" y="0" width="136" height="12" rx="6" fill="currentColor" opacity="0.14" />
+                    <rect x="0" y="0" width="104" height="12" rx="6" fill="var(--accent)" />
+                    <rect x="0" y="34" width="136" height="12" rx="6" fill="currentColor" opacity="0.14" />
+                    <rect x="0" y="34" width="84" height="12" rx="6" fill="var(--saffron)" />
+                    <rect x="0" y="68" width="136" height="12" rx="6" fill="currentColor" opacity="0.14" />
+                    <rect x="0" y="68" width="118" height="12" rx="6" fill="var(--sage)" />
+                  </g>
+                </svg>
+              </div>
+
+              <div class="project-card__body">
+                <div class="project-card__meta">
+                  <span class="badge">Web</span>
+                  <span class="badge">Data</span>
+                  <span class="badge badge--muted">Includes demo data</span>
+                </div>
+                <h3 class="project-card__title">Expense Tracker &amp; Visual Budget App</h3>
+                <p class="project-card__pitch">
+                  A client-side personal expense tracker with transaction logging, category filtering, budget limit alerts, visual cash-flow breakdowns, and localStorage persistence.
+                </p>
+                <ul class="stack-list" aria-label="Technologies used">
+                  <li>HTML5</li>
+                  <li>CSS3</li>
+                  <li>JavaScript</li>
+                  <li>SVG</li>
+                  <li>localStorage</li>
+                </ul>
+                <div class="project-card__links">
+                  <button class="btn btn--small btn--primary" type="button" data-open-dialog="dialog-expense-tracker">
+                    Case study
+                  </button>
+                  <a class="text-link" href="https://sanshikhakova.github.io/expense-tracker/" target="_blank" rel="noopener noreferrer">
+                    Live demo <span aria-hidden="true">↗</span>
+                  </a>
+                  <a class="text-link" href="https://github.com/sanshikhakova/expense-tracker" target="_blank" rel="noopener noreferrer">
+                    GitHub <span aria-hidden="true">↗</span>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Study Dialogs -->
+      <dialog class="case-dialog" id="dialog-math-dash" aria-labelledby="dialog-math-dash-title">
+        <div class="case-dialog__inner">
+          <header class="case-dialog__head">
+            <div>
+              <p class="section__eyebrow">Case Study · Web &amp; Games</p>
+              <h3 class="case-dialog__title" id="dialog-math-dash-title">Math Dash</h3>
+            </div>
+            <button class="icon-btn" type="button" data-close-dialog aria-label="Close case study">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </header>
+          <div class="case-dialog__body">
+            <h4>Problem</h4>
+            <p>
+              Static question banks quickly become predictable, and random multiple-choice distractors rarely reflect how learners actually slip on signs, order of operations, or conditional probability.
+            </p>
+            <h4>Approach</h4>
+            <p>
+              I built procedural problem generators covering Arithmetic, Linear Algebra, Number Theory, Descriptive Statistics, and Probability across selectable difficulty levels, paired with rule-based distractor generation modelled on common mistakes. The game separates game logic from the DOM and supports Sprint and Survival modes, high-resolution timers, speed bonuses, combo multipliers, synthesized Web Audio API feedback, canvas confetti, and full keyboard controls.
+            </p>
+            <h4>Result</h4>
+            <p>
+              At the end of each run, a response-time statistics panel computes accuracy alongside the mean, median, and standard deviation (σ) of response times, storing personal bests locally in the browser with zero external libraries.
+            </p>
+            <h4>What I learned</h4>
+            <p>
+              Separating pure question-generation and timing statistics modules from DOM rendering and Web Audio synthesis kept the ES module architecture straightforward to test and debug.
+            </p>
+          </div>
+          <footer class="case-dialog__foot">
+            <a class="btn btn--small btn--primary" href="https://sanshikhakova.github.io/math-dash/" target="_blank" rel="noopener noreferrer">
+              Live demo ↗
+            </a>
+            <a class="btn btn--small btn--outline" href="https://github.com/sanshikhakova/math-dash" target="_blank" rel="noopener noreferrer">
+              GitHub repo ↗
+            </a>
+          </footer>
+        </div>
+      </dialog>
+
+      <dialog class="case-dialog" id="dialog-marks-analyzer" aria-labelledby="dialog-marks-analyzer-title">
+        <div class="case-dialog__inner">
+          <header class="case-dialog__head">
+            <div>
+              <p class="section__eyebrow">Case Study · Data &amp; Python</p>
+              <h3 class="case-dialog__title" id="dialog-marks-analyzer-title">Student Marks Analyzer</h3>
+            </div>
+            <button class="icon-btn" type="button" data-close-dialog aria-label="Close case study">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </header>
+          <div class="case-dialog__body">
+            <p class="notice-banner">
+              <strong>Dataset note:</strong> All analyses and outputs use a synthetic dataset of 120 generated student records created specifically to test edge cases without exposing real student data.
+            </p>
+            <h4>Problem</h4>
+            <p>
+              Raw examination marksheets frequently arrive with duplicate rows, missing entries, and out-of-range scores that skew averages and hide students who need early academic support.
+            </p>
+            <h4>Approach</h4>
+            <p>
+              I developed a Python CLI pipeline using pandas, NumPy, and matplotlib to validate raw CSV files, handle duplicates and out-of-range scores, and apply median imputation alongside a data-cleaning summary report. It computes 12 univariate metrics, Pearson correlation, OLS regression via <code>np.polyfit</code> with R², outlier detection using both IQR and z-scores, and at-risk student flags.
+            </p>
+            <h4>Result</h4>
+            <p>
+              A single CLI execution generates 9 diagnostic charts, compiles a multi-page PDF report alongside a Markdown summary, and passes an automated pytest suite covering cleaning rules and statistical calculations.
+            </p>
+            <h4>What I learned</h4>
+            <p>
+              Comparing IQR and z-score outlier detection on skewed synthetic distributions showed how sensitive parametric thresholds are to uncleaned extreme values.
+            </p>
+          </div>
+          <footer class="case-dialog__foot">
+            <a class="btn btn--small btn--outline" href="https://github.com/sanshikhakova/student-marks-analyzer" target="_blank" rel="noopener noreferrer">
+              GitHub repo ↗
+            </a>
+          </footer>
+        </div>
+      </dialog>
+
+      <dialog class="case-dialog" id="dialog-expense-tracker" aria-labelledby="dialog-expense-tracker-title">
+        <div class="case-dialog__inner">
+          <header class="case-dialog__head">
+            <div>
+              <p class="section__eyebrow">Case Study · Web &amp; Data</p>
+              <h3 class="case-dialog__title" id="dialog-expense-tracker-title">Expense Tracker &amp; Visual Budget App</h3>
+            </div>
+            <button class="icon-btn" type="button" data-close-dialog aria-label="Close case study">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
+            </button>
+          </header>
+          <div class="case-dialog__body">
+            <p class="notice-banner">
+              <strong>Data note:</strong> Includes seeded demo data so reviewers can inspect populated category breakdowns and monthly cash-flow trends immediately in the browser.
+            </p>
+            <h4>Problem</h4>
+            <p>
+              Tracking day-to-day spending across multiple categories without overshooting monthly budgets is difficult when expense logs sit in raw lists without visual summaries or limit warnings.
+            </p>
+            <h4>Approach</h4>
+            <p>
+              I built a client-side personal expense tracking web application featuring transaction logging, category filtering, budget limit alerts, and persistent browser storage via localStorage, paired with visual spending breakdowns summarizing category-wise expenses and monthly cash-flow trends.
+            </p>
+            <h4>Result</h4>
+            <p>
+              The application runs directly on GitHub Pages with zero build step or third-party runtime dependencies, letting users inspect seeded demo budgets or log and filter their own expenses in light or dark themes.
+            </p>
+            <h4>What I learned</h4>
+            <p>
+              Structuring state updates cleanly around localStorage serialization and hand-coded SVG charts kept category filtering, budget alerts, and trend summaries responsive without external charting libraries.
+            </p>
+          </div>
+          <footer class="case-dialog__foot">
+            <a class="btn btn--small btn--primary" href="https://sanshikhakova.github.io/expense-tracker/" target="_blank" rel="noopener noreferrer">
+              Live demo ↗
+            </a>
+            <a class="btn btn--small btn--outline" href="https://github.com/sanshikhakova/expense-tracker" target="_blank" rel="noopener noreferrer">
+              GitHub repo ↗
+            </a>
+          </footer>
+        </div>
+      </dialog>
+
+      <!-- 03 / SKILLS -->
+      <section class="section" id="skills" aria-labelledby="skills-heading">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="section__eyebrow">03 / Skills</p>
+            <h2 class="section__title" id="skills-heading">Tools &amp; foundations</h2>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-group spotlight-card" data-reveal>
+              <h3 class="skill-group__title">Languages</h3>
+              <ul class="chip-list">
+                <li class="chip">Python</li>
+                <li class="chip">Java</li>
+                <li class="chip">C++</li>
+                <li class="chip">JavaScript (ES6+)</li>
+              </ul>
+            </div>
+
+            <div class="skill-group spotlight-card" data-reveal>
+              <h3 class="skill-group__title">Web</h3>
+              <ul class="chip-list">
+                <li class="chip">HTML5</li>
+                <li class="chip">CSS3</li>
+                <li class="chip">ES6+ Modules</li>
+                <li class="chip">Canvas 2D &amp; SVG</li>
+                <li class="chip">Web Audio API</li>
+                <li class="chip">localStorage</li>
+              </ul>
+            </div>
+
+            <div class="skill-group spotlight-card" data-reveal>
+              <h3 class="skill-group__title">Data &amp; Maths</h3>
+              <ul class="chip-list">
+                <li class="chip">pandas</li>
+                <li class="chip">NumPy</li>
+                <li class="chip">matplotlib</li>
+                <li class="chip">Data Structures</li>
+                <li class="chip">Descriptive &amp; Inferential Statistics</li>
+                <li class="chip">Problem-Solving &amp; Debugging</li>
+              </ul>
+            </div>
+
+            <div class="skill-group spotlight-card" data-reveal>
+              <h3 class="skill-group__title">Tools &amp; Workflow</h3>
+              <ul class="chip-list">
+                <li class="chip">Git</li>
+                <li class="chip">GitHub</li>
+                <li class="chip">GitHub Pages</li>
+                <li class="chip">VS Code</li>
+                <li class="chip">pytest</li>
+                <li class="chip">MS Excel</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="honest-note" data-reveal>
+            <div class="honest-note__col">
+              <h3 class="honest-note__heading">Strongest in</h3>
+              <p>
+                Numerical reasoning, breaking problems down with data structures, systematic debugging, vanilla HTML/CSS/JavaScript interfaces, and statistical data analysis in Python.
+              </p>
+            </div>
+            <div class="honest-note__col">
+              <h3 class="honest-note__heading">Still growing in</h3>
+              <p>
+                Production backend services, large-scale database systems, and applied AI automation workflows explored through my IBM SkillsBuild internship and Generative AI UI/UX coursework.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 / EXPERIENCE & LEARNING -->
+      <section class="section" id="experience" aria-labelledby="experience-heading">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="section__eyebrow">04 / Experience &amp; Learning</p>
+            <h2 class="section__title" id="experience-heading">Education, internships &amp; milestones</h2>
+          </div>
+
+          <div class="exp-layout">
+            <div class="timeline" data-reveal>
+              <article class="timeline__item">
+                <div class="timeline__marker" aria-hidden="true"></div>
+                <p class="timeline__tag">22 June – 31 July 2026 · Internship</p>
+                <h3 class="timeline__title">AI Automation &amp; Intelligent Solutions Intern</h3>
+                <p class="timeline__org">AICTE | IBM SkillsBuild (BharatCares)</p>
+                <p class="timeline__desc">
+                  Proposed and presented a product workflow for MenopauseMitra, an AI chatbot concept designed to support women experiencing menopause and their families across medical and relational needs.
+                </p>
+              </article>
+
+              <article class="timeline__item">
+                <div class="timeline__marker" aria-hidden="true"></div>
+                <p class="timeline__tag">2025 · Award</p>
+                <h3 class="timeline__title">Second Place — Bug Fix Competition</h3>
+                <p class="timeline__org">Annofesta 2025</p>
+              </article>
+
+              <article class="timeline__item">
+                <div class="timeline__marker" aria-hidden="true"></div>
+                <p class="timeline__tag">2025 · Hackathon</p>
+                <h3 class="timeline__title">Hackathon Participant — Explorica 2025</h3>
+                <p class="timeline__org">Inter-College Hackathon organized by Loyola College</p>
+              </article>
+
+              <article class="timeline__item">
+                <div class="timeline__marker" aria-hidden="true"></div>
+                <p class="timeline__tag">Campus Leadership &amp; Activities</p>
+                <h3 class="timeline__title">Creative Engagement Coordinator &amp; Choir Member</h3>
+                <p class="timeline__org">St. Ann’s College for Women</p>
+                <p class="timeline__desc">
+                  Creative Engagement Coordinator for the Gender Champions Unit and Member of the College Choir (SELAH).
+                </p>
+              </article>
+
+              <article class="timeline__item">
+                <div class="timeline__marker" aria-hidden="true"></div>
+                <p class="timeline__tag">Expected May 2027 · Undergraduate</p>
+                <h3 class="timeline__title">B.Sc. in Mathematics, Statistics &amp; Computer Science</h3>
+                <p class="timeline__org">St. Ann’s College for Women, Mehdipatnam, Hyderabad · CGPA: 8.0 (expected)</p>
+                <p class="timeline__desc">
+                  Relevant coursework: Data Structures, Programming Fundamentals, Web Development, Data Analytics, Inferential and Descriptive Statistics, Linear Algebra.
+                </p>
+              </article>
+
+              <article class="timeline__item">
+                <div class="timeline__marker" aria-hidden="true"></div>
+                <p class="timeline__tag">Completed 2023 · Schooling</p>
+                <h3 class="timeline__title">Secondary Education</h3>
+                <p class="timeline__org">St. Ann’s High School, Secunderabad</p>
+              </article>
+            </div>
+
+            <aside class="certs-panel spotlight-card" data-reveal>
+              <h3 class="certs-panel__title">Certifications</h3>
+              <ul class="certs-list">
+                <li>
+                  <span class="certs-list__dot" aria-hidden="true"></span>
+                  <span>Data Analytics with Python</span>
+                </li>
+                <li>
+                  <span class="certs-list__dot" aria-hidden="true"></span>
+                  <span>Web Development</span>
+                </li>
+                <li>
+                  <span class="certs-list__dot" aria-hidden="true"></span>
+                  <span>Generative AI UI/UX</span>
+                </li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 / BEYOND THE CODE -->
+      <section class="section" id="beyond" aria-labelledby="beyond-heading">
+        <div class="container">
+          <div class="section__head" data-reveal>
+            <p class="section__eyebrow">05 / Beyond the Code</p>
+            <h2 class="section__title" id="beyond-heading">Away from the keyboard</h2>
+          </div>
+
+          <div class="beyond-card spotlight-card" data-reveal>
+            <p class="beyond-card__text">
+              Outside lectures and code editors, I am a National Karate Player, represented St. Ann’s College for Women in basketball, and in Taekwondo. I also spend quiet hours painting, taking photographs, tending plants in the garden, reading, and singing with the college choir—habits that bring discipline, visual framing, and steady focus back to my engineering work.
+            </p>
+            <ul class="chip-list" aria-label="Sports, achievements, and personal interests">
+              <li class="chip">National Karate Player</li>
+              <li class="chip">College Basketball</li>
+              <li class="chip">Taekwondo</li>
+              <li class="chip">Painting</li>
+              <li class="chip">Photography</li>
+              <li class="chip">Gardening</li>
+              <li class="chip">Reading</li>
+              <li class="chip">Music</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 06 / CONTACT -->
+      <section class="section section--contact" id="contact" aria-labelledby="contact-heading">
+        <div class="container">
+          <div class="contact-box spotlight-card" data-reveal>
+            <p class="section__eyebrow">06 / Contact</p>
+            <h2 class="section__title" id="contact-heading">Let’s talk about roles or projects</h2>
+            <p class="contact-box__lead">
+              I am based in Hyderabad and available for entry-level software engineering, web development, and data analyst internships or junior roles.
+            </p>
+
+            <div class="contact-box__email-row">
+              <a class="contact-email" id="email-link" href="#contact" data-user="sanjanag1695" data-domain="gmail.com">
+                sanjanag1695 [at] gmail.com
+              </a>
+              <noscript>
+                <span class="contact-email">sanjanag1695@gmail.com</span>
+              </noscript>
+            </div>
+
+            <div class="contact-box__actions">
+              <button class="btn btn--primary" id="copy-email-btn" type="button" data-user="sanjanag1695" data-domain="gmail.com">
+                Copy email
+              </button>
+              <a class="btn btn--outline" href="https://github.com/sanshikhakova" target="_blank" rel="noopener noreferrer">
+                GitHub ↗
+              </a>
+              <a class="btn btn--outline" href="https://www.linkedin.com/in/sanjana-g-bb2b3044b/" target="_blank" rel="noopener noreferrer">
+                LinkedIn ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <p>
+          Designed and hand-coded with HTML, CSS and JavaScript. No frameworks.
+          <a class="text-link" href="https://github.com/sanshikhakova/sanshikhakova.github.io" target="_blank" rel="noopener noreferrer">
+            View source <span aria-hidden="true">↗</span>
+          </a>
+        </p>
+        <p class="site-footer__copy">© <span id="current-year">2026</span> Sanjana G · Hyderabad, India</p>
+      </div>
+    </footer>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
