@@ -1,4 +1,4 @@
-# Sanjana G — Personal Portfolio (`sanshikhakova.github.io`)
+# Sanjana G — Personal Portfolio 
 
 A fast, accessible, zero-dependency personal portfolio built with semantic HTML5, modern CSS, and modular vanilla JavaScript (ES modules). Designed around a **"Mathematical Atelier"** aesthetic, it presents my background in Mathematics, Statistics & Computer Science alongside interactive case studies for web development and data analysis projects.
 
